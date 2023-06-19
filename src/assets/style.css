@@ -1,0 +1,6 @@
+.bgDark{
+    @apply bg-[#262E30] text-[#B8D9BB];
+}
+.bgLight{
+    @apply bg-[#B8D9BB] text-[#262E30];
+}

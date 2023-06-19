@@ -1,15 +1,24 @@
 <template>
-  <AppNavView />
-   <router-view></router-view>
+  <AppNavView :toggleMode="toggleMode" :isDarkMode="isDarkMode" />
+  <router-view :isDarkMode="isDarkMode" />
 </template>
 <script>
-import AppNavView from './components/shared/AppNav.vue';
+import AppNavView from "./components/shared/AppNav.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      isDarkMode: true,
+    };
+  },
   components: {
-    AppNavView
-  }
-}
-
+    AppNavView,
+  },
+  methods: {
+    toggleMode(isDarkMode) {
+      this.isDarkMode = isDarkMode;
+    },
+  },
+};
 </script>
