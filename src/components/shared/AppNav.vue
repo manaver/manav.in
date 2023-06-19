@@ -57,7 +57,7 @@
         v-if="!isSideBarOpen"
         @click="toggleSidebar"
         size="large"
-        class="cursor-pointer"
+        class="md:hidden cursor-pointer"
         name="menu-outline"
       ></ion-icon>
 
@@ -106,10 +106,10 @@ export default {
   @apply w-[70px] h-[70px] rounded-full;
 }
 .navLinks {
-  @apply z-20 w-full left-0 top-[90px] h-[calc(100vh-90px)] pt-5 space-y-4  flex-col items-end text-2xl md:flex-row md:justify-center md:items-center;
+  @apply z-20 w-full md:w-fit left-0 top-[90px] md:top-0 h-[calc(100vh-90px)] md:h-full pt-5 md:pt-0 space-y-4 md:space-y-0 flex-col items-end text-2xl md:text-xl md:flex md:flex-row md:justify-center md:items-center;
 }
 .navItem {
-  @apply relative mx-4 w-full text-end md:w-[80px] md:text-center hover:font-bold;
+  @apply relative mx-4 w-full text-end md:w-[100px] md:text-center hover:font-bold;
 }
 .active {
   @apply font-bold;
