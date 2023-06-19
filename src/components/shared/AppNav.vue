@@ -9,7 +9,15 @@
         />
       </router-link>
     </div>
-    <div class="navLinks">
+    <div
+      :class="{
+        'absolute flex': isSideBarOpen,
+        hidden: !isSideBarOpen,
+        bgDark: isDarkMode,
+        bgLight: !isDarkMode,
+      }"
+      class="navLinks"
+    >
       <router-link
         to="/"
         class="navItem"
@@ -35,17 +43,48 @@
         >Contact</router-link
       >
     </div>
-    <ion-icon
-      @click="toggleMode(!isDarkMode)"
-      class="text-2xl border border-[#B8D9BB] p-1 rounded-full cursor-pointer"
-      name="moon-outline"
-    ></ion-icon>
+
+    <!-- Theme Btn -->
+    <div class="navIcons">
+      <ion-icon
+        @click="toggleMode(!isDarkMode)"
+        class="text-2xl border border-[#B8D9BB] p-1 rounded-full cursor-pointer"
+        name="moon-outline"
+      ></ion-icon>
+
+      <!-- Cat menu -->
+      <ion-icon
+        v-if="!isSideBarOpen"
+        @click="toggleSidebar"
+        size="large"
+        class="cursor-pointer"
+        name="menu-outline"
+      ></ion-icon>
+
+      <ion-icon
+        v-else
+        @click="toggleSidebar"
+        size="large"
+        class="cursor-pointer"
+        name="close-outline"
+      ></ion-icon>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "AppNavView",
+  data() {
+    return {
+      isSideBarOpen: false,
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.isSideBarOpen = !this.isSideBarOpen;
+    },
+  },
   props: {
     toggleMode: {
       type: Function,
@@ -61,18 +100,21 @@ export default {
 
 <style scoped>
 .navbar {
-  @apply font-julius h-[90px] m-0 py-3 px-10 flex flex-row justify-between items-center;
+  @apply font-julius h-[90px] m-0 py-3 px-10 flex flex-row flex-wrap justify-between items-center;
 }
 .navLogo {
   @apply w-[70px] h-[70px] rounded-full;
 }
 .navLinks {
-  @apply flex flex-row justify-center items-center;
+  @apply z-20 w-full left-0 top-[90px] h-[calc(100vh-90px)] pt-5 space-y-4  flex-col items-end text-2xl md:flex-row md:justify-center md:items-center;
 }
 .navItem {
-  @apply relative mx-4 w-[80px] text-center hover:font-bold;
+  @apply relative mx-4 w-full text-end md:w-[80px] md:text-center hover:font-bold;
 }
 .active {
   @apply font-bold;
+}
+.navIcons {
+  @apply space-x-5;
 }
 </style>
