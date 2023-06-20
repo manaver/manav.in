@@ -11,6 +11,7 @@
       <a
         href="https://github.com/manaver/manav.in.git"
         class="underline underline-offset-2 italic"
+        target="_gh"
         >This website is open source.</a
       >
     </p>
