@@ -4,3 +4,9 @@
 .bgLight{
     @apply bg-[#B8D9BB] text-[#262E30];
 }
+.textLight{
+    @apply text-white
+}
+.textDark{
+    @apply text-black
+}
