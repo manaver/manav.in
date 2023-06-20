@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute top-[90px] h-[calc(100vh-90px)] overflow-y-auto min-w-full flex justify-center items-center bgColor"
+    class="hero allCenter"
     :class="getThemeClass(isDarkMode)"
   >
     <div class="md:w-[900px] space-y-8">
@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     getThemeClass,
-    getThemeTextColor
+    getThemeTextColor,
   },
 };
 </script>

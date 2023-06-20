@@ -1,8 +1,8 @@
 .bgDark{
-    @apply bg-[#262E30] text-[#B8D9BB];
+    @apply bg-dark text-light;
 }
 .bgLight{
-    @apply bg-[#B8D9BB] text-[#262E30];
+    @apply bg-light text-dark
 }
 .textLight{
     @apply text-white
@@ -11,8 +11,14 @@
     @apply text-black
 }
 .borderDark{
-    @apply border-[#262E30]
+    @apply border-dark;
 }
 .borderLight{
-    @apply border-[#B8D9BB]
+    @apply border-light;
+}
+.hero{
+    @apply absolute top-[90px] min-h-[calc(100vh-90px)] overflow-y-auto w-full;
+}
+.allCenter{
+    @apply flex justify-center items-center;
 }

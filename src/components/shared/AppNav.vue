@@ -2,7 +2,11 @@
   <div class="navbar" :class="{ bgDark: isDarkMode, bgLight: !isDarkMode }">
     <div class="navLogo mx-7">
       <router-link to="/">
-        <p class="navLogo"></p>
+        <img
+          class="navLogo"
+          src="https://pbs.twimg.com/profile_images/1632349501351661569/8FPON-tB_400x400.jpg"
+          alt=""
+        />
       </router-link>
     </div>
     <div
@@ -111,7 +115,7 @@ export default {
 
 <style scoped>
 .navbar {
-  @apply absolute font-julius h-[90px] w-screen m-0 py-3 px-1 sm:px-10 flex flex-row flex-wrap justify-between items-center z-20;
+  @apply absolute font-julius h-[90px] w-screen  m-0 py-3 px-1 sm:px-10 flex flex-row flex-wrap justify-between items-center z-20;
 }
 .navLogo {
   @apply w-[50px] h-[50px] bg-[#5f6161] rounded-full;
