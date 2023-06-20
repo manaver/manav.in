@@ -10,3 +10,9 @@
 .textDark{
     @apply text-black
 }
+.borderDark{
+    @apply border-[#262E30]
+}
+.borderLight{
+    @apply border-[#B8D9BB]
+}

@@ -42,13 +42,24 @@
 
     <!-- Theme Btn -->
     <div class="navIcons">
+      <!-- Theme Icon starts -->
       <ion-icon
+        v-if="isDarkMode"
         @click="toggleMode(!isDarkMode)"
-        class="text-2xl border border-[#B8D9BB] p-1 rounded-full cursor-pointer"
+        class="themeIcon"
+        :class="getThemeBorderColor(isDarkMode)"
         name="moon-outline"
       ></ion-icon>
+      <ion-icon
+        v-else
+        @click="toggleMode(!isDarkMode)"
+        class="themeIcon"
+        :class="getThemeBorderColor(isDarkMode)"
+        name="sunny-outline"
+      ></ion-icon>
+      <!-- Theme icon ends -->
 
-      <!-- Cat menu -->
+      <!-- Cat menu icon starts -->
       <ion-icon
         v-if="!isSideBarOpen"
         @click="toggleSidebar"
@@ -64,11 +75,14 @@
         class="cursor-pointer"
         name="close-outline"
       ></ion-icon>
+      <!-- Cat Menu icon ends -->
     </div>
   </div>
 </template>
 
 <script>
+import { getThemeBorderColor } from "../../theme/theme.js";
+
 export default {
   name: "AppNavView",
   data() {
@@ -80,6 +94,7 @@ export default {
     toggleSidebar() {
       this.isSideBarOpen = !this.isSideBarOpen;
     },
+    getThemeBorderColor,
   },
   props: {
     toggleMode: {
@@ -112,5 +127,8 @@ export default {
 }
 .navIcons {
   @apply space-x-5;
+}
+.themeIcon {
+  @apply text-2xl border p-1 rounded-full cursor-pointer;
 }
 </style>

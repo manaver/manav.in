@@ -4,3 +4,6 @@ export function getThemeClass(isDarkMode) {
 export function getThemeTextColor(isDarkMode) {
     return isDarkMode ? 'textLight' : 'textDark';
 }
+export function getThemeBorderColor(isDarkMode) {
+    return isDarkMode ? 'borderLight' : 'borderDark';
+}
