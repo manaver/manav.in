@@ -11,7 +11,7 @@
     </div>
     <div
       :class="{
-        'absolute flex': isSideBarOpen,
+        'fixed flex': isSideBarOpen,
         hidden: !isSideBarOpen,
         bgDark: isDarkMode,
         bgLight: !isDarkMode,
@@ -115,7 +115,7 @@ export default {
 
 <style scoped>
 .navbar {
-  @apply absolute font-julius h-[90px] w-screen  m-0 py-3 px-1 sm:px-10 flex flex-row flex-wrap justify-between items-center z-20;
+  @apply fixed md:relative bg-opacity-90 md:bg-opacity-100 font-julius h-[90px] w-screen  m-0 py-3 px-1 sm:px-10 flex flex-row flex-wrap justify-between items-center z-20;
 }
 .navLogo {
   @apply w-[50px] h-[50px] bg-[#5f6161] rounded-full;

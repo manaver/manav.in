@@ -31,6 +31,6 @@ export default {
 
 <style scoped>
 .pageHeading {
-  @apply text-5xl w-fit mb-14 mx-auto font-extralight relative text-center;
+  @apply relative text-5xl w-fit mb-14 mx-auto font-extralight text-center;
 }
 </style>

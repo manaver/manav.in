@@ -16,9 +16,9 @@
 .borderLight{
     @apply border-light;
 }
-.hero{
-    @apply absolute top-[90px] min-h-[calc(100vh-90px)] overflow-y-auto w-full;
-}
 .allCenter{
     @apply flex justify-center items-center;
+}
+.hero{
+    @apply relative pt-[92px] md:pt-0 min-h-[calc(100vh-90px)] overflow-y-auto w-full;
 }
