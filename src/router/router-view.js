@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import HomeView from "../components/home/Home.vue";
 import AboutView from "../components/about/About.vue";
 import BlogView from "../components/blog/Blog.vue";
-import ContactView from "../components/contact/Contact.vue";
+// import ContactView from "../components/contact/Contact.vue";
 
 const routes = [
     {
@@ -20,11 +20,11 @@ const routes = [
       name: "blog",
       component: BlogView,
     },    
-    {
-      path: "/contact",
-      name: "contact",
-      component: ContactView,
-    },
+    // {
+    //   path: "/contact",
+    //   name: "contact",
+    //   component: ContactView,
+    // },
 ];
 
 const router = createRouter({

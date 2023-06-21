@@ -20,5 +20,5 @@
     @apply flex justify-center items-center;
 }
 .hero{
-    @apply relative pt-[92px] md:pt-0 min-h-[calc(100vh-90px)] overflow-y-auto w-full;
+    @apply relative pt-[92px] md:pt-0 min-h-[calc(100vh-90px)] overflow-y-auto min-w-full;
 }

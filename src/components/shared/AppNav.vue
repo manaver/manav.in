@@ -36,12 +36,12 @@
         :class="{ active: $route.path === '/blogs' }"
         >Blogs</router-link
       >
-      <router-link
+      <!-- <router-link
         to="/contact"
         class="navItem"
         :class="{ active: $route.path === '/contact' }"
         >Contact</router-link
-      >
+      > -->
     </div>
 
     <!-- Theme Btn -->
