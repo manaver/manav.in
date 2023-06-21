@@ -121,7 +121,7 @@ export default {
   @apply w-[50px] h-[50px] bg-[#5f6161] rounded-full;
 }
 .navLinks {
-  @apply z-20 w-full md:w-fit left-0 top-[90px] md:top-0 h-[calc(100vh-90px)] md:h-full pt-5 md:pt-0 space-y-4 md:space-y-0 flex-col items-end text-2xl md:text-xl md:flex md:flex-row md:justify-center md:items-center;
+  @apply z-20 w-full md:w-fit left-0 top-[90px] md:top-0 h-[calc(100vh-90px)] md:h-full pt-5 md:pt-0 space-y-4 md:space-y-0 flex-col items-end text-2xl md:text-xl md:flex md:flex-row md:justify-center md:items-center bg-opacity-90;
 }
 .navItem {
   @apply relative mx-4 w-full text-end md:w-[100px] md:text-center hover:font-bold;

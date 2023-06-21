@@ -1,31 +1,38 @@
 <template>
   <div class="connectIcons">
-    <ion-icon
-      class="cursor-pointer hover:text-blue-600"
-      name="logo-twitter"
-    ></ion-icon>
-    <ion-icon
-      class="cursor-pointer hover:text-gray-600"
-      name="logo-github"
-    ></ion-icon>
-    <ion-icon
-      class="cursor-pointer hover:text-purple-600"
-      name="logo-discord"
-    ></ion-icon>
-    <ion-icon
-      class="cursor-pointer hover:text-blue-700"
-      name="logo-linkedin"
-    ></ion-icon>
-    <ion-icon
-      class="cursor-pointer hover:text-green-600"
-      name="logo-whatsapp"
-    ></ion-icon>
+    <a href="https://twitter.com/Manav1924" target="_contact">
+      <ion-icon
+        class="cursor-pointer hover:text-blue-600"
+        name="logo-twitter"
+      ></ion-icon>
+    </a>
+    <a href="https://github.com/manaver" target="_contact">
+      <ion-icon
+        class="cursor-pointer hover:text-gray-600"
+        name="logo-github"
+      ></ion-icon>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/manav-verma-590a92204/"
+      target="_contact"
+    >
+      <ion-icon
+        class="cursor-pointer hover:text-blue-700"
+        name="logo-linkedin"
+      ></ion-icon>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=916006572059" target="_contact">
+      <ion-icon
+        class="cursor-pointer hover:text-green-600"
+        name="logo-whatsapp"
+      ></ion-icon>
+    </a>
   </div>
 </template>
 
 <script>
 export default {
-    name: "Social_Icons",
+  name: "Social_Icons",
 };
 </script>
 
