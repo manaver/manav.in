@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-[calc(100vh-90px)] min-w-full bgColor"
+    class="hero flex justify-center flex-col pt-10"
     :class="getThemeClass(isDarkMode)"
   >
     <page_heading Heading="The Inside Scoop on My Projects" :isDarkMode="isDarkMode" />
