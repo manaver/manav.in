@@ -47,9 +47,7 @@ export default {
       )
         .then((response) => response.json())
         .then((data) => {
-          data = data.tree.filter((item) =>
-            item.path.endsWith("projects.json")
-          );
+          data = data.tree.filter((item) => item.path.includes("projects/"));
           this.projectData = data;
         });
     },
