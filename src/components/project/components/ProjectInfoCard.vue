@@ -1,5 +1,5 @@
 <template>
-  <div class="blogCard">
+  <div class="projectCard">
     <h5 class="text-2xl font-bold">
       {{ decodedContent["Project Name"] }}
     </h5>
@@ -9,7 +9,8 @@
     <!-- Url of Project -->
     <div v-if="decodedContent['ProjectUrl']['isPublic']" class="ProjectUrl">
       <a
-        :href="decodedContent.ProjectUrl.url" target="_url"
+        :href="decodedContent.ProjectUrl.url"
+        target="_url"
         class="flex items-center space-x-1"
         ><span>Check Repository</span>
         <ion-icon name="arrow-forward-outline"></ion-icon
@@ -18,7 +19,10 @@
     </div>
 
     <div else-if="decodedContent['LiveUrl']['isLive']" class="LiveUrl">
-      <a :href="decodedContent.LiveUrl.url"  target="_url" class="flex items-center space-x-1"
+      <a
+        :href="decodedContent.LiveUrl.url"
+        target="_url"
+        class="flex items-center space-x-1"
         ><span>Check Live Project</span>
         <ion-icon name="arrow-forward-outline"></ion-icon
       ></a>
@@ -28,14 +32,14 @@
     
     <script>
 export default {
-  name: "BlogInfoCard",
+  name: "ProjectInfoCard",
   data() {
     return {
       decodedContent: "",
     };
   },
   props: {
-    blogData: {
+    projectData: {
       type: String,
       required: true,
     },
@@ -45,13 +49,13 @@ export default {
     },
   },
   methods: {
-    async fetchBlogContent() {
+    async fetchProjectContent() {
       try {
-        const response = await fetch(this.blogData);
+        const response = await fetch(this.projectData);
         const data = await response.json();
         this.decodeContent(data.content);
       } catch (error) {
-        console.error("Error fetching blog content:", error);
+        console.error("Error fetching project content:", error);
       }
     },
     decodeContent(content) {
@@ -60,13 +64,13 @@ export default {
   },
 
   mounted() {
-    this.fetchBlogContent();
+    this.fetchProjectContent();
   },
 };
 </script>
     
     <style scoped>
-.blogCard {
+.projectCard {
   @apply py-6 w-3/5 mx-auto space-y-2 border-b-2 border-gray-500 my-3;
 }
 .authorInfo {
