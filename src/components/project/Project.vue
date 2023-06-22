@@ -9,9 +9,9 @@
     />
 
     <ProjectInfo
-      v-for="data in blogData"
+      v-for="data in projectData"
       :key="data.url"
-      :blogData="data.url"
+      :projectData="data.url"
       :isDarkMode="isDarkMode"
     />
   </div>
@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      blogData: [],
+      projectData: [],
     };
   },
   components: {
@@ -41,19 +41,21 @@ export default {
   },
   methods: {
     getThemeClass,
-    fetchBlogPosts() {
+    fetchProject() {
       fetch(
         `https://api.github.com/repos/manaver/info-manav.in/git/trees/main?recursive=1`
       )
         .then((response) => response.json())
         .then((data) => {
-          data = data.tree.filter((item) => item.path.endsWith("projects.json"));
-          this.blogData = data;
+          data = data.tree.filter((item) =>
+            item.path.endsWith("projects.json")
+          );
+          this.projectData = data;
         });
     },
   },
   mounted() {
-    this.fetchBlogPosts();
+    this.fetchProject();
   },
 };
 </script>
