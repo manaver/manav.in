@@ -4,18 +4,11 @@
     :class="getThemeClass(isDarkMode)"
   >
     <page_heading
-      Heading="Things that are better left to a blog post"
+      Heading="The Inside Scoop on My Projects"
       :isDarkMode="isDarkMode"
     />
 
-    <div
-      v-if="JSON.stringify(blogData) === '[]'"
-      class="text-2xl font-light text-center my-20"
-    >
-      Blogs will be added soon..
-    </div>
-
-    <BlogInfo
+    <ProjectInfo
       v-for="data in blogData"
       :key="data.url"
       :blogData="data.url"
@@ -26,11 +19,11 @@
     
     <script>
 import { getThemeClass } from "../../theme/theme.js";
-import BlogInfo from "./components/BlogInfoCard.vue";
+import ProjectInfo from "./components/ProjectInfoCard.vue";
 import page_heading from "../reusable/PageHeading.vue";
 
 export default {
-  name: "BlogView",
+  name: "ProjectView",
   props: {
     isDarkMode: {
       type: Boolean,
@@ -43,7 +36,7 @@ export default {
     };
   },
   components: {
-    BlogInfo,
+    ProjectInfo,
     page_heading,
   },
   methods: {
@@ -54,7 +47,7 @@ export default {
       )
         .then((response) => response.json())
         .then((data) => {
-          data = data.tree.filter((item) => item.path.includes("blogs/"));
+          data = data.tree.filter((item) => item.path.endsWith("projects.json"));
           this.blogData = data;
         });
     },
