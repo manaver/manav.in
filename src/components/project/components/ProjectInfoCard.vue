@@ -18,7 +18,7 @@
       <div>It's Open Source</div>
     </div>
 
-    <div else-if="decodedContent['LiveUrl']['isLive']" class="LiveUrl">
+    <div if="decodedContent['LiveUrl']['isLive']" class="LiveUrl">
       <a
         :href="decodedContent.LiveUrl.url"
         target="_url"
