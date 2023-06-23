@@ -15,28 +15,43 @@
         </h1>
         <div class="pe-10 md:pe-24 flex flex-col">
           <p>
-            I've been making computers do my bidding for over 15 years. I've
-            done everything from designing websites to building the servers they
-            run on. These days my passion is building web applications with
-            Laravel, Vue, and Tailwind.
+            I am a passionate full-stack developer and freelancer with a strong
+            interest in open source and DevOps. I am skilled at writing clean
+            and functional web designs, and I am always looking for ways to
+            improve my skills in web development.
           </p>
           <div class="mt-3 flex flex-col space-y-3">
-            <p>Some interesting projects I've worked on include:</p>
+            <p>Some of the projects I have worked on include:</p>
             <ul class="list-disc pl-5 my-2 space-y-1">
-              <li>A chemical warehouse management system</li>
-              <li>A marriage equality telephone robot</li>
-              <li>A cryptocurrency trading robot</li>
-              <li>Clinical data collection and storage</li>
-              <li>Police software to help vulnerable people</li>
+              <li>
+                Aslam Tour and Travels - A tour and travel agency specialized in
+                Hajj and Umrah packages, custom packages, and visa and passport
+                services.
+              </li>
+              <li>
+                CodeAPI - I built CodeAPI, a platform for building and
+                distributing custom APIs, designed for competitive programmers
+                and developers, in a hackathon.
+              </li>
+              <li>
+                Leaf- Leaf is an open-source community for questions and answers
+                about open source development. I created this project in a
+                hackathon.
+              </li>
+              <li>
+                Travel Journal - I created a web application for planning and
+                documenting travel experiences, including a blog section, trip
+                planner, and interactive journal, in a 1-day hackathon.
+              </li>
             </ul>
             <p>
-              I care deeply about open-source software, privacy, best practices,
-              open standards, idiomatic code, and great user and developer
-              experiences.
+              I am passionate about open source software, DevOps, and best
+              practices. I write idiomatic code and prioritize user and
+              developer experience.
             </p>
             <p>
-              When I'm not coding, I enjoy cooking, woodworking, photography,
-              spicy food, dark beer, motorcycles, and heavy music.
+              Apart from coding, I enjoy spending my free time engaging in
+              badminton and running, as well as exploring the outdoors.
             </p>
           </div>
         </div>
