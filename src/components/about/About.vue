@@ -45,6 +45,19 @@
               </li>
             </ul>
             <p>
+              I am proficient in the following programming languages and
+              frameworks:
+            </p>
+            <ul class="list-disc pl-5 my-2 space-y-1">
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>Vue.js</li>
+              <li>React.js</li>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
+            </ul>
+            <p>I am also familiar with MySQL and Appwrite as databases.</p>
+            <p>
               I am passionate about open source software, DevOps, and best
               practices. I write idiomatic code and prioritize user and
               developer experience.
