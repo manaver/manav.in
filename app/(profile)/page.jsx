@@ -9,9 +9,9 @@ export default function Home() {
                         Full-Stack Developer with a Passion for LARAVEL and NEXT JS.
                     </h1>
                     <p className="px-10 md:px-24">
-                        Hi there! I'm Manav Verma, a passionate developer from J&K, India. I
+                        Hi there! I&apos;m Manav Verma, a passionate developer from J&K, India. I
                         love diving into new challenges and constantly expanding my skills.
-                        Currently, I'm on an exciting journey of exploration, eager to discover
+                        Currently, I&apos;m on an exciting journey of exploration, eager to discover
                         and learn about innovative technologies.
                     </p>
                 </div>

@@ -16,10 +16,10 @@ export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
                                 <ion-icon name="arrow-forward-outline"></ion-icon
                                 >
                             </Link>
-                            <div>It's Open Source</div>
+                            <div>It&apos;s Open Source</div>
                         </>
                         :
-                        <div>It's a hidden gem</div>
+                        <div>It&apos;s a hidden gem</div>
                     }
                 </div>
             </>
@@ -41,7 +41,7 @@ export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
                             >
                         </Link>
                         :
-                        <div>It's not live yet</div>
+                        <div>It&apos;s not live yet</div>
                     }
                 </div>
             </>

@@ -12,7 +12,7 @@ export default function About() {
                     <div className="content py-5 p-3 md:p-1 md:w-3/5 space-y-8">
                         <h1
                             className="pe-10 md:pe-24 text-4xl w-full md:text-5xl font-bold">
-                            Hi there,<br/>I'm Manav Verma.
+                            Hi there,<br/>I&apos;m Manav Verma.
                         </h1>
                         <div className="pe-10 md:pe-24 flex flex-col">
                             <p>
