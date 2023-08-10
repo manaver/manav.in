@@ -14,7 +14,6 @@ export default function Home() {
                         Currently, I'm on an exciting journey of exploration, eager to discover
                         and learn about innovative technologies.
                     </p>
-                    {/*<Social_Icons className="px-10 md:px-24" />*/}
                 </div>
             </div>
         </>
