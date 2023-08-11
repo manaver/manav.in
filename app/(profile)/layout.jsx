@@ -5,6 +5,7 @@ import {Providers} from '../providers';
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import SocialIcons from "@/components/layout/social-icons";
+import Image from "next/image";
 
 const inter = Inter({subsets: ['latin']});
 
@@ -22,6 +23,7 @@ export default function RootLayout({children}) {
         <Providers attribute="class" defaultTheme="system" enableSystem={false}>
             <body className={`h-full scrollbar overflow-x-hidden ${inter.className}`}>
             <Header/>
+            <div className={`fixed top-0 bg-[url('/darkLogo.png')] dark:bg-[url('/lightLogo.png')] bg-no-repeat bg-contain bg-center min-w-[100vw] min-h-[100vh] opacity-10`}></div>
             {children}
             <SocialIcons/>
             <Footer/>
