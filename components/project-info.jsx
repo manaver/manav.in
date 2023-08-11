@@ -11,7 +11,7 @@ export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
                             <Link
                                 href={data['data']['url']}
                                 target="_url"
-                                className="flex cursor-pointer items-center space-x-1"
+                                className="flex activeItem cursor-pointer items-center space-x-1"
                             ><span>Check Repository</span>
                                 <ion-icon name="arrow-forward-outline"></ion-icon
                                 >
@@ -35,7 +35,7 @@ export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
                         <Link
                             href={data['data']['url']}
                             target="_url"
-                            className="flex items-center space-x-1"
+                            className="flex activeItem items-center space-x-1"
                         ><span>Check Live Project</span>
                             <ion-icon name="arrow-forward-outline"></ion-icon
                             >

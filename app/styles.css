@@ -6,6 +6,10 @@
     @apply flex justify-center items-center;
 }
 
+.activeItem {
+    @apply border-[1px] border-slate-600 dark:border-slate-300 bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 p-2 rounded-xl;
+}
+
 /*Nav Links*/
 .navbar {
     @apply fixed md:relative h-[90px] w-screen m-0 py-3 px-1 sm:px-10 flex flex-row flex-wrap justify-between items-center z-20;
