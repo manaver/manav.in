@@ -1,11 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import {Menu, Moon, Sun, X} from "lucide-react";
 import {useTheme} from "next-themes";
 import {usePathname} from "next/navigation";
 import {useState} from "react";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar"
+
 
 export default function Header() {
 
@@ -15,19 +16,17 @@ export default function Header() {
 
     return (
         <div className="navbar bg-white dark:bg-[rgba(12,12,12,0.9)] ">
-            <div className="navLogo mx-7">
+            <div className="mx-7 duration-300 hover:scale-110">
                 <Link href="/">
-                    <Image
-                        className="navLogo rounded-full"
-                        src="/manav.jpg"
-                        alt=""
-                        width={50}
-                        height={50}
-                    />
+                    <Avatar>
+                        <AvatarImage src="/manav.jpg"/>
+                        <AvatarFallback>MV</AvatarFallback>
+                    </Avatar>
                 </Link>
             </div>
+
             <div
-                className={`${open?'flex':'hidden'} md:flex navLinks bg-white dark:bg-[rgba(12,12,12,0.6)] bg-opacity-60 backdrop-blur-sm`}
+                className={`${open ? 'flex' : 'hidden'} md:flex navLinks bg-white dark:bg-[rgba(12,12,12,0.6)] bg-opacity-60 backdrop-blur-sm`}
             >
                 <Link
                     href="/"
@@ -61,12 +60,14 @@ export default function Header() {
                     )}
                 </button>
 
-                <button className="md:hidden" onClick={()=>{setOpen(!open)}}>
+                <button className="md:hidden" onClick={() => {
+                    setOpen(!open)
+                }}>
                     {
                         !open ?
                             <Menu size={30}/>
                             :
-                            <X size={30} />
+                            <X size={30}/>
                     }
                 </button>
             </div>

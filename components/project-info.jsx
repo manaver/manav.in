@@ -1,21 +1,53 @@
 import Link from "next/link";
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
+
 
 export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
 
     const ProjectUrl = (data) => {
         return (
             <>
-                <div className="ProjectUrl">
+                <div className="ProjectUrl my-2">
                     {data['data'].isPublic ?
                         <>
-                            <Link
-                                href={data['data']['url']}
-                                target="_url"
-                                className="flex activeItem cursor-pointer items-center space-x-1"
-                            ><span>Check Repository</span>
-                                <ion-icon name="arrow-forward-outline"></ion-icon
-                                >
-                            </Link>
+                            <AlertDialog>
+                                <AlertDialogTrigger>
+                                    <div
+                                        className="flex activeItem cursor-pointer items-center space-x-1"
+                                    ><span>Check Repository</span>
+                                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                                    </div>
+                                </AlertDialogTrigger>
+                                <AlertDialogContent>
+                                    <AlertDialogHeader>
+                                        <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                                        <AlertDialogDescription>
+                                            This action will redirect to another page.
+                                        </AlertDialogDescription>
+                                    </AlertDialogHeader>
+                                    <AlertDialogFooter>
+                                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                                        <AlertDialogAction>
+                                            <Link
+                                                href={data['data']['url']}
+                                                target="_url">
+                                                Continue
+                                            </Link>
+                                        </AlertDialogAction>
+                                    </AlertDialogFooter>
+                                </AlertDialogContent>
+                            </AlertDialog>
+
                             <div>It&apos;s Open Source</div>
                         </>
                         :
@@ -29,17 +61,37 @@ export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
     const LiveUrl = (data) => {
         return (
             <>
-                <div className="LiveUrl">
+                <div className="LiveUrl my-2">
                     {data['data'].isLive
                         ?
-                        <Link
-                            href={data['data']['url']}
-                            target="_url"
-                            className="flex activeItem items-center space-x-1"
-                        ><span>Check Live Project</span>
-                            <ion-icon name="arrow-forward-outline"></ion-icon
-                            >
-                        </Link>
+                        <AlertDialog>
+                            <AlertDialogTrigger>
+                                <div
+                                    className="flex activeItem cursor-pointer items-center space-x-1"
+                                ><span>Check Live Project</span>
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                            </AlertDialogTrigger>
+                            <AlertDialogContent>
+                                <AlertDialogHeader>
+                                    <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                                    <AlertDialogDescription>
+                                        This action will redirect to another page.
+                                    </AlertDialogDescription>
+                                </AlertDialogHeader>
+                                <AlertDialogFooter>
+                                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+                                    <AlertDialogAction>
+                                        <Link
+                                            href={data['data']['url']}
+                                            target="_url">
+                                            Continue
+                                        </Link>
+                                    </AlertDialogAction>
+                                </AlertDialogFooter>
+                            </AlertDialogContent>
+                        </AlertDialog>
+
                         :
                         <div>It&apos;s not live yet</div>
                     }
