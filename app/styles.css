@@ -8,7 +8,7 @@
 
 /*Nav Links*/
 .navbar {
-    @apply fixed md:relative bg-opacity-90 h-[90px] w-screen m-0 py-3 px-1 sm:px-10 flex flex-row flex-wrap justify-between items-center z-20;
+    @apply fixed md:relative h-[90px] w-screen m-0 py-3 px-1 sm:px-10 flex flex-row flex-wrap justify-between items-center z-20;
 }
 
 .navLogo {

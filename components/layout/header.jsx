@@ -14,7 +14,7 @@ export default function Header() {
     const pathname = usePathname();
 
     return (
-        <div className="navbar bg-white dark:bg-[rgba(12,12,12,0.6)] bg-opacity-60">
+        <div className="navbar bg-white dark:bg-[rgba(12,12,12,0.9)] ">
             <div className="navLogo mx-7">
                 <Link href="/">
                     <Image
@@ -27,7 +27,7 @@ export default function Header() {
                 </Link>
             </div>
             <div
-                className={`${open?'flex':'hidden'} md:flex navLinks bg-white dark:bg-[rgba(12,12,12,0.6)] bg-opacity-60`}
+                className={`${open?'flex':'hidden'} md:flex navLinks bg-white dark:bg-[rgba(12,12,12,0.6)] bg-opacity-60 backdrop-blur-sm`}
             >
                 <Link
                     href="/"
