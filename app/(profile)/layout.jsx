@@ -6,6 +6,7 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import SocialIcons from "@/components/layout/social-icons";
 import Image from "next/image";
+import {Analytics} from "@vercel/analytics/react";
 
 const inter = Inter({subsets: ['latin']});
 
@@ -27,6 +28,7 @@ export default function RootLayout({children}) {
             {children}
             <SocialIcons/>
             <Footer/>
+            <Analytics />
             </body>
         </Providers>
         </html>
