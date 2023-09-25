@@ -1,18 +1,20 @@
-import Image from "next/image";
 import Heading from "@/components/Heading";
+import dynamic from 'next/dynamic'
+
+const UserImage = dynamic(() => import('@/components/user-image'))
 
 export default function About() {
     return (
         <>
             <div
                 className="hero flex justify-center flex-col pt-10">
-                <Heading title="The Untold Stories"/>
+                <Heading title="The Untold Stories" />
 
                 <div className="pageContent flex justify-start flex-col-reverse items-center">
                     <div className="content py-5 p-3 md:p-1 md:w-3/5 space-y-8">
                         <h1
                             className="pe-10 md:pe-24 text-4xl w-full md:text-5xl font-bold">
-                            Hi there,<br/>I&apos;m Manav Verma.
+                            Hi there,<br />I&apos;m Manav Verma.
                         </h1>
                         <div className="pe-10 md:pe-24 flex flex-col">
                             <p>
@@ -63,15 +65,7 @@ export default function About() {
                         </div>
                     </div>
 
-                    <div className="image p-10 md:p-1">
-                        <Image
-                            className="rounded-xl w-[300px]"
-                            src="/manav.jpg"
-                            alt=""
-                            width={1000}
-                            height={1000}
-                        />
-                    </div>
+                    <UserImage />
                 </div>
             </div>
         </>

@@ -1,5 +1,8 @@
 import Heading from "@/components/Heading";
-import ProjectInfo from "@/components/project-info";
+import dynamic from 'next/dynamic'
+
+const ProjectInfo = dynamic(() => import('@/components/project-info'))
+
 
 export default function Project() {
 

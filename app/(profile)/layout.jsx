@@ -1,16 +1,14 @@
 import '../globals.css';
 import '../styles.css';
-import {Inter} from 'next/font/google';
-import {Providers} from '../providers';
+import { Inter } from 'next/font/google';
+import { Providers } from '../providers';
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import SocialIcons from "@/components/layout/social-icons";
-import Image from "next/image";
-import {Analytics} from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
+import dynamic from 'next/dynamic'
 
-const inter = Inter({subsets: ['latin']});
-
-export const runtime = 'edge'
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
     title: 'Manav Verma',
@@ -18,19 +16,21 @@ export const metadata = {
     keywords: 'Freelancer, Developer, Full-stack-developer, Frontend-developer, Backend-developer.'
 }
 
-export default function RootLayout({children}) {
+const BackgroundBanner = dynamic(() => import('@/components/background-banner'))
+
+export default function RootLayout({ children }) {
     return (
         <html lang="en">
-        <Providers attribute="class" defaultTheme="system" enableSystem={false}>
-            <body className={`h-full scrollbar overflow-x-hidden ${inter.className}`}>
-            <Header/>
-            <div className={`fixed top-0 bg-[url('/darkLogo.png')] dark:bg-[url('/lightLogo.png')] bg-no-repeat bg-contain bg-center min-w-[100vw] min-h-[100vh] opacity-10`}></div>
-            {children}
-            <SocialIcons/>
-            <Footer/>
-            <Analytics />
-            </body>
-        </Providers>
+            <Providers attribute="class" defaultTheme="system" enableSystem={false}>
+                <body className={`h-full scrollbar overflow-x-hidden ${inter.className}`}>
+                    <Header />
+                    <BackgroundBanner />
+                    {children}
+                    <SocialIcons />
+                    <Footer />
+                    <Analytics />
+                </body>
+            </Providers>
         </html>
     );
 }
