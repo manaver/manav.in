@@ -64,11 +64,11 @@ export default function Project() {
 
     return (<>
         <div className="hero flex justify-center flex-col pt-10">
-            <Heading title="The Inside Scoop on My Projects"/>
+            <Heading title="The Inside Scoop on My Projects" />
 
             {data.map((item, index) => (
                 <ProjectInfo key={index} title={item.Title} subHeading={item.Subheading} projectUrl={item.ProjectUrl}
-                             liveUrl={item.LiveUrl}/>))}
+                    liveUrl={item.LiveUrl} />))}
         </div>
     </>);
 }
