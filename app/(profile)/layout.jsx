@@ -4,9 +4,11 @@ import { Inter } from 'next/font/google';
 import { Providers } from '../providers';
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import SocialIcons from "@/components/layout/social-icons";
 import { Analytics } from "@vercel/analytics/react";
 import dynamic from 'next/dynamic'
+
+const BackgroundBanner = dynamic(() => import('@/components/background-banner'))
+const SocialIcons = dynamic(() => import('@/components/layout/social-icons'))
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,8 +17,6 @@ export const metadata = {
     description: 'I am a passionate full-stack developer and freelancer with a strong interest in open source and DevOps. I am skilled at writing clean and functional web designs, and I am always looking for ways to improve my skills in web development.',
     keywords: 'Freelancer, Developer, Full-stack-developer, Frontend-developer, Backend-developer.'
 }
-
-const BackgroundBanner = dynamic(() => import('@/components/background-banner'))
 
 export default function RootLayout({ children }) {
     return (
