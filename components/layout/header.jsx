@@ -47,9 +47,10 @@ export default function Header() {
             <div
                 className={`${open ? 'flex' : 'hidden'} md:flex navLinks bg-white dark:bg-[rgba(12,12,12,0.6)] bg-opacity-60 backdrop-blur-sm`}
             >
-                {navLinks.map((link) => (
+                {navLinks.map((link, index) => (
                     <Link
                         href={link.href}
+                        key={index}
                     className={`${pathname === link.href ? 'active' : ''} navItem`}>
                         {link.name}
                     </Link>

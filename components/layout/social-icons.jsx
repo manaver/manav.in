@@ -29,7 +29,7 @@ export default function SocialIcons() {
                         attributes="cursor-pointer hover:text-green-600"
                     />
                 </Link>
-                <Link href="mailto:manavver.me@gmail.com">
+                <Link href="mailto:manavverma.me+work@gmail.com">
                     <GetIcon iconName="Mail"
                         attributes="cursor-pointer hover:text-red-600"
                     />
