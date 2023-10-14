@@ -38,7 +38,7 @@ export default function Header() {
             <div className="mx-7 duration-300 hover:scale-110">
                 <Link href="/">
                     <Avatar>
-                        <AvatarImage src="/manav.jpg" />
+                        <AvatarImage src="/manav.jpg" alt='MV' />
                         <AvatarFallback>MV</AvatarFallback>
                     </Avatar>
                 </Link>
@@ -72,7 +72,9 @@ export default function Header() {
                     )}
                 </button>
 
-                <button className="md:hidden" onClick={() => {
+                <button className="md:hidden"
+                    aria-label="Toggle SideBar"
+                    onClick={() => {
                     setOpen(!open)
                 }}>
                     {
