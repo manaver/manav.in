@@ -1,8 +1,10 @@
 import Heading from "@/components/Heading";
+import LoadingCircle from "@/components/loading-circle";
 import dynamic from 'next/dynamic'
 
-const ProjectInfo = dynamic(() => import('@/components/project-info'))
-
+const ProjectList = dynamic(() => import("@/components/project-list"), {
+    loading: () => <LoadingCircle />
+})
 
 export default function Project() {
 
@@ -65,10 +67,7 @@ export default function Project() {
     return (<>
         <div className="hero flex justify-center flex-col pt-10">
             <Heading title="The Inside Scoop on My Projects" />
-
-            {data.map((item, index) => (
-                <ProjectInfo key={index} title={item.Title} subHeading={item.Subheading} projectUrl={item.ProjectUrl}
-                    liveUrl={item.LiveUrl} />))}
+            <ProjectList projects={data} />
         </div>
     </>);
 }

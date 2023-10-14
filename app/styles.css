@@ -20,11 +20,11 @@
 }
 
 .navLinks {
-    @apply z-20 left-0 top-[89.4px] md:top-0 h-[calc(100vh-90px)] md:h-full w-full md:w-fit pt-5 md:pt-0 space-y-10 md:space-y-0 fixed md:relative flex-col md:flex-row md:justify-center items-end md:items-center;
+    @apply z-20 left-0 top-[89.4px] md:top-0 h-[calc(100vh-90px)] md:h-full w-full md:w-fit md:min-w-fit pt-5 md:pt-0 space-y-10 md:space-y-0 fixed md:relative flex-col md:flex-row md:justify-center items-end md:items-center;
 }
 
 .navItem {
-    @apply relative mx-4 w-fit text-end md:w-[100px] md:text-center duration-300 hover:scale-110 text-3xl md:text-lg ;
+    @apply relative mx-4 w-fit text-end md:min-w-fit md:text-center duration-300 hover:scale-110 text-2xl md:text-lg ;
 }
 
 .active {

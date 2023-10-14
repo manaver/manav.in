@@ -2,9 +2,6 @@ export default function Footer(){
     return (
         <div
             className="allCenter flex-col space-y-4 relative h-32 p-4">
-        <div>
-        {/*<Social_icons />*/}
-        </div>
         <p>
             © 2023 Manav Verma.
             <a

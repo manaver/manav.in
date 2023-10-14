@@ -1,7 +1,10 @@
 import Heading from "@/components/Heading";
+import LoadingCircle from "@/components/loading-circle";
 import dynamic from 'next/dynamic'
 
-const UserImage = dynamic(() => import('@/components/user-image'))
+const UserImage = dynamic(() => import('@/components/user-image'), {
+    loading: () => <LoadingCircle />
+})
 
 export default function About() {
     return (

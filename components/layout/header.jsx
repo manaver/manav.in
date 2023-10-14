@@ -1,25 +1,44 @@
 "use client";
 
 import Link from "next/link";
-import {Menu, Moon, Sun, X} from "lucide-react";
-import {useTheme} from "next-themes";
-import {usePathname} from "next/navigation";
-import {useState} from "react";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar"
+import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import GetIcon from "../get-icons";
 
 
 export default function Header() {
 
-    const {theme, setTheme} = useTheme();
+    const { theme, setTheme } = useTheme();
     const [open, setOpen] = useState(false);
     const pathname = usePathname();
+
+    const navLinks = [
+        {
+            name: 'Home',
+            href: '/'
+        },
+        {
+            name: 'About',
+            href: '/about'
+        },
+        {
+            name: 'Projects',
+            href: '/projects'
+        },
+        // {
+        //     name: 'Accomplishments',
+        //     href: '/accomplishments'
+        // }
+    ];
 
     return (
         <div className="navbar bg-white dark:bg-[rgba(12,12,12,0.9)] ">
             <div className="mx-7 duration-300 hover:scale-110">
                 <Link href="/">
                     <Avatar>
-                        <AvatarImage src="/manav.jpg"/>
+                        <AvatarImage src="/manav.jpg" />
                         <AvatarFallback>MV</AvatarFallback>
                     </Avatar>
                 </Link>
@@ -28,35 +47,27 @@ export default function Header() {
             <div
                 className={`${open ? 'flex' : 'hidden'} md:flex navLinks bg-white dark:bg-[rgba(12,12,12,0.6)] bg-opacity-60 backdrop-blur-sm`}
             >
-                <Link
-                    href="/"
-                    className={`${pathname === '/' ? 'active' : ''} navItem`}>
-                    Home
-                </Link>
-                <Link
-                    href="/about"
-                    className={`${pathname === '/about' ? 'active' : ''} navItem`}>
-                    About
-                </Link>
-                <Link
-                    href="/projects"
-                    className={`${pathname === '/projects' ? 'active' : ''} navItem`}>
-                    Projects
-                </Link>
+                {navLinks.map((link) => (
+                    <Link
+                        href={link.href}
+                    className={`${pathname === link.href ? 'active' : ''} navItem`}>
+                        {link.name}
+                    </Link>
+                ))}
             </div>
 
             <div className="icons flex items-center space-x-6 pe-3">
                 <button className="navIcons themeIcon"
-                        onClick={() => {
-                            const scheme = theme !== 'light' ? 'light' : 'dark';
-                            setTheme(scheme);
-                        }}
-                        aria-label="Toggle Theme"
+                    onClick={() => {
+                        const scheme = theme !== 'light' ? 'light' : 'dark';
+                        setTheme(scheme);
+                    }}
+                    aria-label="Toggle Theme"
                 >
                     {theme === 'dark' ? (
-                        <Sun/>
+                        <GetIcon iconName='Sun' />
                     ) : (
-                        <Moon/>
+                        <GetIcon iconName='Moon' />
                     )}
                 </button>
 
@@ -65,9 +76,9 @@ export default function Header() {
                 }}>
                     {
                         !open ?
-                            <Menu size={30}/>
+                            <GetIcon iconName='Menu' />
                             :
-                            <X size={30}/>
+                            <GetIcon iconName='X' />
                     }
                 </button>
             </div>
