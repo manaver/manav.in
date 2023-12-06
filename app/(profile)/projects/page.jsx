@@ -24,7 +24,7 @@ export default function Project() {
             "isPublic": false, "url": "#"
         },
         "LiveUrl": {
-            "isLive": true, "url": "https://hindiringtone.in/"
+            "isLive": true, "url": "https://hindiringtone.site/"
         }
     }, {
         "Title": "CodeAPI",
