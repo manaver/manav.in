@@ -18,13 +18,13 @@ export default function Project() {
             "isLive": true, "url": "https://aslamtourandtravel.xyz/"
         }
     }, {
-        "Title": "Hindi Ringtone",
-        "Subheading": "A ringtone downloading website designed to download free latest hindi ringtones.",
+        "Title": "Mp3 Ringtones",
+        "Subheading": "A ringtone downloading website designed to download free latest ringtones.",
         "ProjectUrl": {
             "isPublic": false, "url": "#"
         },
         "LiveUrl": {
-            "isLive": true, "url": "https://hindiringtone.site/"
+            "isLive": true, "url": "https://www.mp3ringtonedownload.site/"
         }
     }, {
         "Title": "CodeAPI",
