@@ -21,7 +21,7 @@ export default function SocialIcons() {
                     />
                 </Link>
                 <Link   
-                    href="https://www.linkedin.com/in/manav-verma-590a92204/"
+                    href="https://www.linkedin.com/in/manaver/"
                     aria-label="linkedin"
                     target="_contact"
                 >
