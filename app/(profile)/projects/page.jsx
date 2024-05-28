@@ -15,7 +15,7 @@ export default function Project() {
             "isPublic": false, "url": "#"
         },
         "LiveUrl": {
-            "isLive": true, "url": "https://aslamtourandtravel.xyz/"
+            "isLive": true, "url": "https://www.aslamtourandtravel.in/"
         }
     }, {
         "Title": "Mp3 Ringtones",
