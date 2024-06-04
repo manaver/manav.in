@@ -41,7 +41,7 @@ export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
                                                 className="w-full"
                                                 href={data['data']['url']}
                                                 target="_url">
-                                            <AlertDialogAction>
+                                            <AlertDialogAction className="w-full">
                                                     Continue
                                             </AlertDialogAction>
                                         </Link>
@@ -86,7 +86,7 @@ export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
                                             className="w-full"
                                             href={data['data']['url']}
                                             target="_url">
-                                        <AlertDialogAction>
+                                        <AlertDialogAction className="w-full">
                                                 Continue
                                         </AlertDialogAction>
                                         </Link>
