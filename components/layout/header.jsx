@@ -50,6 +50,7 @@ export default function Header() {
                 {navLinks.map((link, index) => (
                     <Link
                         href={link.href}
+                        onClick={()=>setOpen(false)}
                         key={index}
                     className={`${pathname === link.href ? 'active' : ''} navItem`}>
                         {link.name}
