@@ -38,6 +38,7 @@ export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
                                     <AlertDialogFooter>
                                         <AlertDialogCancel>Cancel</AlertDialogCancel>
                                          <Link
+                                                className="w-full"
                                                 href={data['data']['url']}
                                                 target="_url">
                                             <AlertDialogAction>
@@ -81,13 +82,14 @@ export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
                                 </AlertDialogHeader>
                                 <AlertDialogFooter>
                                     <AlertDialogCancel>Cancel</AlertDialogCancel>
-                                    <AlertDialogAction>
-                                        <Link
+                                     <Link
+                                            className="w-full"
                                             href={data['data']['url']}
                                             target="_url">
-                                            Continue
+                                        <AlertDialogAction>
+                                                Continue
+                                        </AlertDialogAction>
                                         </Link>
-                                    </AlertDialogAction>
                                 </AlertDialogFooter>
                             </AlertDialogContent>
                         </AlertDialog>
