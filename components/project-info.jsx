@@ -37,13 +37,13 @@ export default function ProjectInfo({title, subHeading, projectUrl, liveUrl}) {
                                     </AlertDialogHeader>
                                     <AlertDialogFooter>
                                         <AlertDialogCancel>Cancel</AlertDialogCancel>
-                                        <AlertDialogAction>
-                                            <Link
+                                         <Link
                                                 href={data['data']['url']}
                                                 target="_url">
-                                                Continue
-                                            </Link>
-                                        </AlertDialogAction>
+                                            <AlertDialogAction>
+                                                    Continue
+                                            </AlertDialogAction>
+                                        </Link>
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
