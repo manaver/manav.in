@@ -3,7 +3,7 @@ export default function Footer(){
         <div
             className="allCenter flex-col space-y-4 relative h-32 p-4">
         <p>
-            © 2023 Manav Verma.
+            © 2024 Manav Verma.
             <a
                 href="https://github.com/manaver/manav.in.git"
                 className="underline underline-offset-2 italic"
